@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>M GAY</title>
+<style>
+  :root{--sky:#00cfff}
+  html,body{height:100%;margin:0}
+  body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:radial-gradient(ellipse at center, #04102a 0%, #000814 100%);
+    overflow:hidden;
+    font-family: "Segoe UI", Roboto, system-ui, "Arial Black", "Impact", sans-serif;
+  }
+
+  /* container đảm bảo chỉ 1 dòng, không lặp */
+  .wrap{
+    width:100%;
+    max-width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 2vw;
+    box-sizing:border-box;
+  }
+
+  /* font auto-fit: dùng clamp để scale, và nowrap để chặn xuống dòng */
+  .big {
+    color:var(--sky);
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    text-align:center;
+    white-space:nowrap;        /* không cho xuống dòng */
+    overflow:hidden;
+    text-overflow:clip;
+    -webkit-text-stroke: 2px rgba(0,0,0,0.6);
+    text-shadow:
+      0 6px 30px rgba(0,0,0,0.7),
+      0 0 40px rgba(0,204,255,0.12);
+    /* font-size tự co: không để quá lớn gây overflow */
+    font-size: clamp(6rem, 18vw, 12rem);
+    line-height:1;
+  }
+
+  /* nếu vẫn quá rộng, giảm khoảng cách chữ */
+  @media (max-width:800px){
+    .big{letter-spacing:0.01em; font-size: clamp(3rem, 20vw, 8rem);}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="big">MÀY GAY</div>
+  </div>
+</body>
+</html>
